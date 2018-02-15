@@ -1,0 +1,29 @@
+{
+  "name": "alex-js-contentful-ui-extension",
+  "version": "1.0.0",
+  "description": "A Contentful UI extension to check for insensitive writing",
+  "main": "index.js",
+  "engines": {
+    "node": ">=8.0"
+  },
+  "scripts": {
+    "create": "contentful-extension create --space-id ${SPACE_ID}",
+    "update": "contentful-extension update --space-id ${SPACE_ID} --force"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stefanjudis/alex-js-contentful-ui-extension"
+  },
+  "keywords": [
+    "contentful"
+  ],
+  "author": "stefan judis <stefanjudis@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stefanjudis/alex-js-contentful-ui-extension/issues"
+  },
+  "homepage": "https://github.com/stefanjudis/alex-js-contentful-ui-extension#readme",
+  "devDependencies": {
+    "contentful-extension-cli": "^2.0.0"
+  }
+}

@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Contentful UI extension country select</title>
+    <link rel="stylesheet" href="https://contentful.github.io/ui-extensions-sdk/cf-extension.css">
+    <script src="https://contentful.github.io/ui-extensions-sdk/cf-extension-api.js"></script>
+    <script src="https://www.stefanjudis.com/alex.min.js"></script>
+    <style>
+      .flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #eee;
+        padding: .5em 0;
+      }
+
+      h4 {
+        margin-bottom: 0;
+      }
+
+      ul {
+        margin: .25em;
+      }
+    </style>
+  </head>
+  <body>
+      <div class="flex">
+        <h2 id="resultHeading"></h2>
+        <button class="cf-btn-primary" id="doit" type="button">Check language</button>
+      </div>
+      <div id="result"></div>
+    </div>
+    <script type="text/javascript">
+      window.contentfulExtension.init(({contentType, field, entry}) => {
+        const resultContainer = document.getElementById('result');
+        const resultHeading = document.getElementById('resultHeading');
+
+        function validateEntry(entry) {
+          const VALIDATIONS = {
+            'Symbol': (text) => alex.text(text).messages,
+            'Text': (text) => alex.markdown(text).messages
+          };
+
+          const result = contentType.fields.reduce((result, field) => {
+            if (VALIDATIONS[field.type]) {
+              const warnings = VALIDATIONS[field.type](entry.fields[field.id].getValue());
+
+              if (warnings.length) {
+                result.push({
+                  id: field.name,
+                  warnings
+                });
+              }
+            }
+
+            return result;
+          }, []);
+
+          if (result.length) {
+            resultContainer.innerHTML = `
+              ${
+                result.map(item => {
+                  return `
+                    <h4>${item.id}</h4>
+                    <ul>
+                      ${
+                        item.warnings.map(warning => {
+                          return `<li>${warning.message} (${warning.fatal ? 'error' : 'warning'})</li>`;
+                        }).join('')
+                      }
+                    </ul>
+                  `;
+                }).join('')
+              }
+            `;
+            resultHeading.innerHTML = 'There are some issues.';
+          } else {
+            resultContainer.innerHTML = '';
+            resultHeading.innerHTML = 'All good!';
+          }
+        }
+
+        document.getElementById('doit').addEventListener(
+          'click', _ => validateEntry(entry)
+        );
+
+        validateEntry(entry);
+      });
+    </script>
+  </body>
+</html>

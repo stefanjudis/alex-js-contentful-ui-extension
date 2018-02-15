@@ -1,0 +1,6 @@
+{
+  "name": "Alex.js UI-extension",
+  "id": "cf-alex-js",
+  "fieldTypes": ["Boolean"],
+  "srcdoc": "./index.html"
+}
