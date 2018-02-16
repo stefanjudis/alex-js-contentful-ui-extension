@@ -65,6 +65,6 @@ Update task will upload the extension to your space on Contentful.
 
 ## License
 
-Copyright &copy; Contentful Developer Relations
+Copyright &copy; Stefan Judis
 
 Licensed under the [MIT license](https://github.com/contentful/developer-relations/ui-country-select/blob/master/LICENSE).
