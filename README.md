@@ -5,6 +5,14 @@ A validation mechanism for insensitive language as [Contentful UI Extension](htt
 
 ![figure](https://raw.githubusercontent.com/stefanjudis/alex-js-contentful-ui-extension/master/demo.jpg "Alex.js Contentful UI Extension demo")
 
+**Important:** Unfortunately there is no Alex.js script available publicly. This is why this UI-extension uses my hosted version of it.
+
+```html
+<script src="https://www.stefanjudis.com/alex.min.js"></script>
+```
+
+I don't mind anybody else using this version but relying on me here, means that I could break you UI-extension. **You might consider hosting your own version.**
+
 ## How it works
 
 The UI-extension is available for `Boolean` types.
