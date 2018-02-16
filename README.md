@@ -5,6 +5,16 @@ A validation mechanism for insensitive language as [Contentful UI Extension](htt
 
 ![figure](https://raw.githubusercontent.com/stefanjudis/alex-js-contentful-ui-extension/master/demo.jpg "Alex.js Contentful UI Extension demo")
 
+## How it works
+
+The UI-extension is available for `Boolean` types.
+
+![figure](https://raw.githubusercontent.com/stefanjudis/alex-js-contentful-ui-extension/master/setup.jpg "Alex.js Contentful UI Extension demo")
+
+When installed the UI-extension will evaluate all fields of the entry it is included in with the type `Symbol` (short text) and `Text` (long text). Short text will be evaluated with `alex.text` and long text as it's mostly markdown in my case with `alex.markdown`.
+
+I decided to not block publishing with this UI-extension because sometimes there are false-positives.
+
 ## Installation
 
 ```sh
