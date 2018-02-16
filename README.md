@@ -26,8 +26,8 @@ I decided to not block publishing with this UI-extension because sometimes there
 ## Installation
 
 ```sh
-git clone git@github.com:contentful-developer-relations/ui-country-select.git
-cd ui-country-select
+git clone git@github.com:contentful-developer-relations/alex-js-contentful-ui-extension.git
+cd alex-js-contentful-ui-extension
 npm install
 ```
 
