@@ -7,8 +7,8 @@
     "node": ">=8.0"
   },
   "scripts": {
-    "create": "contentful-extension create --space-id ${SPACE_ID}",
-    "update": "contentful-extension update --space-id ${SPACE_ID} --force"
+    "create": "contentful extension create --space-id ${SPACE_ID}",
+    "update": "contentful extension update --space-id ${SPACE_ID} --force"
   },
   "repository": {
     "type": "git",
@@ -23,7 +23,8 @@
     "url": "https://github.com/stefanjudis/alex-js-contentful-ui-extension/issues"
   },
   "homepage": "https://github.com/stefanjudis/alex-js-contentful-ui-extension#readme",
-  "devDependencies": {
-    "contentful-extension-cli": "^2.0.0"
+  "devDependencies": {},
+  "dependencies": {
+    "contentful-cli": "^0.8.3"
   }
 }
