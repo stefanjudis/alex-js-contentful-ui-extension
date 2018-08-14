@@ -3,7 +3,7 @@ A UI extension to check for insensitive writing
 
 A validation mechanism for insensitive language as [Contentful UI Extension](https://www.contentful.com/developers/docs/concepts/uiextensions/) using [Alex.js](http://alexjs.com/).
 
-![figure](https://raw.githubusercontent.com/stefanjudis/alex-js-contentful-ui-extension/master/demo.jpg "Alex.js Contentful UI Extension demo")
+![figure](https://raw.githubusercontent.com/stefanjudis/alex-js-contentful-ui-extension/master/screenshot.png "Alex.js Contentful UI Extension demo")
 
 **Important:** Unfortunately there is no Alex.js script available publicly. This is why this UI-extension uses my hosted version of it.
 
